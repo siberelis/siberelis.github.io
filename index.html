@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>See Be Release</title>
+    
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<div style="position: absolute; z-index: 0;
+left: 50%; top: 16%; transform: translate(-50%, -50%)">
+
+
+ <p><img src="seeberelease3.png" height=50px></img></p>
+
+</div>
+
+<div style="position: absolute; z-index: 0;
+left: 50%; top: 21%; transform: translate(-50%, -50%)">
+<a href="sonic.html">SONIC</a>
+<a href="vision.html">VISION</a>
+<a href="visual.html">VISUAL</a>
+<a href="solutions.html">SOLUTIONS</a>
+</div>
+
+
+
+
+<!-- канвасы -->
+<div>
+  <canvas id="bg" width=500 height=500 
+  style=" position: absolute; z-index: 0;
+  left: 50%; top: 53%; transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255); border-radius: 40px"></canvas>
+
+<canvas id="synth" width=500 height=500 
+    style=" position: absolute; z-index: 1;
+    left: 50%; top: 53%; transform: translate(-50%, -50%);
+    border:1px solid #d3d3d3; border-radius: 40px"></canvas>
+
+<canvas id="myCanvas" width=500 height=500
+    style=" position: absolute;
+    left: 50%; top: 53%; transform: translate(-50%, -50%);
+    z-index: 2;
+    border:1px solid #d3d3d3; border-radius: 40px"></canvas>
+ 
+</div>
+
+
+<script src=./hydra-synth.js></script>
+<script src=./art_2.js></script> 
+<script src=./three.js></script>
+<script src=./GLTFLoader.js></script>
+<script src=./OrbitControls.js></script>
+<script src=./33.js></script>
+
+<!-- соцсети -->
+
+    <div style="position: absolute;
+    left: 50%; bottom: 0%; transform: translate(-50%, 0)"
+    >
+
+    <a href="index.html"
+    target="_self"
+    onclick="window.open(
+      'https://t.me/siberelis','telegram','width=600,height=400')">
+      <img src="telegram.svg" width="50" height="50" ></a>
+      
+      <a href=https://twitter.com/siberelis target="_blank">
+    <img src="twitter.svg" width="50" height="50"></a>
+    
+    <a href=https://instagram.com/siberelis target="_blank">
+      <img src="instagram.svg" width="45" height="45"></a>
+
+    </div>
+
+
+ 
+<!-- SBR FLOWER -->
+
+<div onclick="delay ('index.html')" 
+style="position: absolute;
+left: 50%; bottom: 80.5%;
+transform: translate(-50%, -50%)">
+<!-- link delay -->
+<script>function delay (URL) {
+  setTimeout( function() { window.location = URL }, 1200 );
+}
+</script>
+
+  <div class="square toggle-down" onclick="toggle()">
+  <img src="SBR.png" width="100" height="100"></img>
+  </div>
+
+<!-- rotate animation -->
+  <script>
+  
+    var upClass = 'toggle-up';
+    var downClass = 'toggle-down';
+    
+    function toggle() {
+      var square = document.querySelector('.square');
+      
+      if (~square.className.indexOf(downClass)) {
+        square.className = square.className.replace(downClass, upClass);
+      } else {
+            square.className = square.className.replace(upClass, downClass);
+      }
+      
+    }
+    
+  </script>
+
+</div>
+
+
+
+
+  <p><img src="seeberelease.png" 
+  height=7% 
+   
+   style="bottom: 0px; position: absolute"></img></p>
+
+  <p><img src="siberelisu.png" 
+    height=7% 
+      
+    style="bottom: 0px; right: 0px; position: absolute"></img></p>
+
+</body>
+</html>
