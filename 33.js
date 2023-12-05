@@ -1,6 +1,9 @@
 
-
-      //Scene
+// import * as THREE from 'three';
+// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+	 
+	 //Scene
       var scene = new THREE.Scene();
 	
 	  
@@ -53,14 +56,24 @@
 		scene.add(light);
 
 		//OrbitControls
-		orbit = new THREE.OrbitControls(
+		controls = new THREE.OrbitControls(
 			camera, renderer.domElement 
      );
-		orbit.maxPolarAngle = Math.PI / 2;
-		orbit.update();
-    orbit.enablePan = false,
-    orbit.enableZoom = false;
-
+	 controls.target.set(0, 0, 0);
+	 controls.enableDamping = true;
+	 controls.maxPolarAngle = THREE.MathUtils.degToRad(110);
+	 controls.minPolarAngle = THREE.MathUtils.degToRad(70);
+	//  controls.maxAzimuthAngle = THREE.MathUtils.degToRad(20);
+	//  controls.minAzimuthAngle = THREE.MathUtils.degToRad(-20);
+	 controls.minDistance = 10;
+	 controls.maxDistance = 100;
+	 controls.enableRotate = true; 
+	 controls.update();
+	 controls.enablePan = false;
+	 controls.enableDamping = true;
+	 controls.enableZoom = false;
+ 	//  controls.addEventListener('end', () => {
+ 	//  controls.reset();});
    
 
 		
@@ -77,7 +90,7 @@
         mesh = gltf.scene;
         scene.add( mesh );
 		mesh.rotation.y = 91;
-    mesh.position.y = -4.5;
+    mesh.position.y = -4.7;
 		
 
 
@@ -122,3 +135,5 @@ clock = new THREE.Clock();
 
 	}
    
+
+	//fix 3d on all devices!

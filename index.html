@@ -1,83 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>See Be Release</title>
-    
     <link rel="stylesheet" href="./style.css">
-
+    <!-- make favicon! -->
 </head>
 
 <body>
 
-<div style="position: absolute; z-index: 0;
-left: 50%; top: 16%; transform: translate(-50%, -50%)">
-
-
- <p><img src="t3os.png" height=50px></img></p>
-
-</div>
-
-<div style="position: absolute; z-index: 0;
-left: 50%; top: 21%; transform: translate(-50%, -50%)">
-<a href="sonic.html">SONIC</a>
-<a href="vision.html">VISION</a>
-<a href="visual.html">VISUAL</a>
-<a href="solutions.html">SOLUTIONS</a>
-</div>
-
-
-
-
-<!-- канвасы -->
-<div>
-  <canvas id="bg" width=500 height=500 
-  style=" position: absolute; z-index: 0;
-  left: 50%; top: 53%; transform: translate(-50%, -50%);
-  background-color: rgb(255, 255, 255); border-radius: 40px"></canvas>
-
-<canvas id="synth" width=500 height=500 
-    style=" position: absolute; z-index: 1;
-    left: 50%; top: 53%; transform: translate(-50%, -50%);
-    border:1px solid #d3d3d3; border-radius: 40px"></canvas>
-
-<canvas id="myCanvas" width=500 height=500
-    style=" position: absolute;
-    left: 50%; top: 53%; transform: translate(-50%, -50%);
-    z-index: 2;
-    border:1px solid #d3d3d3; border-radius: 40px"></canvas>
- 
-</div>
-
-
-<script src=./hydra-synth.js></script>
-<script src=./art_2.js></script> 
-<script src=./three.js></script>
-<script src=./GLTFLoader.js></script>
-<script src=./OrbitControls.js></script>
-<script src=./33.js></script>
-
-<!-- соцсети -->
-
-    <div style="position: absolute;
-    left: 50%; bottom: 0%; transform: translate(-50%, 0)"
-    >
-
-    <a href="index.html"
-    target="_self"
-    onclick="window.open(
-      'https://t.me/t3_os','telegram','width=600,height=400')">
-      <img src="telegram.svg" width="50" height="50" ></a>
-
-    </div>
-
-
- 
-<!-- SBR FLOWER -->
+<!-- FLOWER -->
 
 <div onclick="delay ('index.html')" 
 style="position: absolute;
-left: 50%; bottom: 80.5%;
+left: 50%; top: 8.5%;
 transform: translate(-50%, -50%)">
 <!-- link delay -->
 <script>function delay (URL) {
@@ -86,7 +21,7 @@ transform: translate(-50%, -50%)">
 </script>
 
   <div class="square toggle-down" onclick="toggle()">
-  <img src="SBR.png" width="100" height="100"></img>
+  <img src="logo.png" width="100" height="100"></img>
   </div>
 
 <!-- rotate animation -->
@@ -110,18 +45,85 @@ transform: translate(-50%, -50%)">
 
 </div>
 
+<!-- t3os logo -->
+
+<div style="
+position: absolute;
+z-index: 0;
+left: 50%; top: 16%; 
+transform: translate(-50%, -50%)">
+ <p><img src="t3os.png" height=50px></img></p>
+
+</div>
+
+
+<div style="
+position: absolute; 
+z-index: 0;
+left: 50%; top: 20%; 
+transform: translate(-53%, -50%); 
+display: flex;
+">
+<a href="sonic.html" target="iframeCanvas">SONIC</a>
+<a href="vision.html" target="iframeCanvas">VISION</a>
+<a href="visual.html" target="iframeCanvas">VISUAL</a>
+<a href="solutions.html" target="iframeCanvas">SOLUTIONS</a>
+</div>
 
 
 
-  <p><img src="seeberelease.png" 
-  height=7% 
-   
-   style="bottom: 0px; position: absolute"></img></p>
+<div id="canvas">
+  <!-- Use iframe to embed other HTML pages -->
+  <iframe name="iframeCanvas"src="feya.html"></iframe>
+</div>
 
-  <p><img src="siberelisu.png" 
-    height=7% 
-      
-    style="bottom: 0px; right: 0px; position: absolute"></img></p>
+
+
+<!-- соцсети -->
+
+<div style=" 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;"
+    >
+      <a href="index.html"
+      target="_self"
+      onclick="window.open(
+      'https://t.me/t3_os','telegram','width=550,height=550')">
+      <img src="telegram.svg" height="50" ></a>
+
+      <a href="index.html"
+      target="_self"
+      onclick="window.open(
+        'https://artstation.com/t3os','artstation','width=1280,height=720')">
+        <img src="artstation.svg" height="50" ></a>
+
+      <a href="index.html"
+      target="_self"
+      onclick="window.open(
+        'https://youtube.com/@t3os','youtube','width=1280,height=720')">
+        <img src="youtube.svg" height="50" ></a>
+
+</div>
 
 </body>
 </html>
+
+
+
+<!--
+
+• go back to div container design
+
+• arrow buttons to switch pages
+
+• slower rotation OrbitControls
+
+
+• mobile lower bar z-index +1
+
+• mobile threejs fix
+
+• lazy load pictures
+-->

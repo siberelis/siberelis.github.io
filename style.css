@@ -1,3 +1,10 @@
+/* * {
+  border: 1px solid #ee9999;
+} */
+
+
+
+
 html {
   min-height: 100%
 }
@@ -5,12 +12,14 @@ html {
 
 body {
 
-
+  text-shadow: rgb(126, 255, 233) 0.0em 0.2em 0.1em;
   background: 
   
+  
+
   linear-gradient(rgb(117, 205, 201), rgb(209, 250, 255));
 
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0;
   /*
   justify-content: center;
@@ -19,7 +28,7 @@ body {
 
   font-family: Helvetica;
 
-  text-shadow: rgb(126, 255, 233) 0.0em 0.2em 0.1em;
+ 
   
 }
 
@@ -34,6 +43,8 @@ margin: 5px;
 
 }
 
+
+
 .square {
   width: 100px;
   height: 100px;
@@ -43,9 +54,52 @@ margin: 5px;
 
 .toggle-down {
   transform: rotate(0deg);
+  cursor: pointer;
 }
 
 
 .toggle-up {
   transform: rotate(360deg);
+}
+
+
+a.current {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+  text-shadow: rgb(0, 255, 208) 0.0em 0.0em 0.1em;
+
+  cursor: default;
+}
+
+/* a.current::before {
+  content: '>'; 
+  margin-right: 5px; 
+  text-decoration: none;
+} */
+
+
+.bandcamp {
+position: relative;
+flex-basis: 50%;
+display: flex;
+align-items: center;
+
+}
+
+
+
+#canvas {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
