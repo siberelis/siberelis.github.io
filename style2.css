@@ -11,7 +11,9 @@ iframe{
   border-radius: 10px
 }
 
-img{
+
+
+img:not([src*=".svg"]) {
 
   border-radius: 10px
 }
