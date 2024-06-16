@@ -44,7 +44,10 @@ font-size: 20pt;
 
 }
 
-
+.content {
+  margin-bottom: 20px; /* Add a top margin to allow space for the fixed header */
+  padding: 20px;
+}
 
 .square {
   width: 100px;
