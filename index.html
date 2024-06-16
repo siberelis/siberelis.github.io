@@ -4,24 +4,66 @@
     <title>See Be Release</title>
     <link rel="stylesheet" href="./style.css">
     <!-- make favicon! -->
+
 </head>
 
 <body>
 
+ 
+
+<!-- 
+  <canvas id="logoCanvas"
+          style="
+                  padding-left: 0;
+                  padding-right: 0;
+                  margin-left: auto;
+                  margin-right: auto;
+                  display: block;
+
+
+                  cursor:all-scroll; 
+                  border:px solid #ffffff; 
+                  background-color: rgb(255, 255, 255);
+                  border-radius: 500px">
+  </canvas> -->
+
 <!-- FLOWER -->
 
+
 <div onclick="delay ('index.html')" 
-style="position: absolute;
-left: 50%; top: 8.5%;
-transform: translate(-50%, -50%)">
+style="
+
+display: flex;
+justify-content: center;">
 <!-- link delay -->
 <script>function delay (URL) {
   setTimeout( function() { window.location = URL }, 1200 );
 }
 </script>
 
-  <div class="square toggle-down" onclick="toggle()">
-  <img src="logo.png" width="100" height="100"></img>
+<div class="square toggle-down" onclick="toggle()"
+ style="
+ margin-top: 25px;  
+ width: 120px; 
+ height: 120px">
+ 
+  <!-- <iframe style="
+ 
+  border: 0; 
+  width: 100px; 
+  height: 100px
+  " 
+src="logo.html" seamless><a href="index.html"></a></iframe> -->
+<img style=" 
+
+/* translate: -12px; */
+
+
+" src="logo.gif" width="120" height="120"></img>
+
+
+
+
   </div>
 
 <!-- rotate animation -->
@@ -48,44 +90,145 @@ transform: translate(-50%, -50%)">
 <!-- t3os logo -->
 
 <div style="
-position: absolute;
-z-index: 0;
-left: 50%; top: 16%; 
-transform: translate(-50%, -50%)">
- <p><img src="t3os.png" height=50px></img></p>
+    display: flex;
+    justify-content: center;"
+    >
+ <p><img src="t3o.png" height=60px></img></p>
+</div>
+
+
+
+<div class="fixed-header" style="display: flex;
+justify-content: center; font-family: Buka" >
+  <a href="#" onclick="loadContent('sonic.html'); return false;">ЗВУК</a>
+  <a href="#" onclick="loadContent('vision.html'); return false;">ИДЕЯ</a>
+  <a href="#" onclick="loadContent('visual.html'); return false;">АРТ</a>
+  <a href="#" onclick="loadContent('solutions.html'); return false;">ДЕЛА</a>
+</div>
+
+<div class="content" id="content">
+<!-- Content will be loaded here -->
+
+
 
 </div>
 
 
-<div style="
-position: absolute; 
-z-index: 0;
-left: 50%; top: 20%; 
-transform: translate(-53%, -50%); 
+<!-- <script src=./hydra-synth.js></script>
+<script src=./art_2.js></script>
+
+<script src=./three.js></script>
+<script src=./GLTFLoader.js></script>
+<script src=./OrbitControls.js></script> -->
+<!-- <script type="module" src=./feya.js></script> -->
+
+<!-- <script src=./33.js></script> -->
+
+
+<script>
+// Function to load HTML files into the div
+function loadContent(htmlFile) {
+fetch(htmlFile)
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('content').innerHTML = data;
+  })
+  .catch(error => console.error(error));
+}
+
+
+window.onload = function() {
+  loadContent('iFeya.html');}
+
+
+
+</script>
+
+
+
+
+
+
+<script src=./hydra-synth.js></script>
+<script src=./art_2.js></script>
+<script src=./three.js></script>
+<script src=./GLTFLoader.js></script>
+<script src=./OrbitControls.js></script>
+<script src=./33.js></script>
+
+<!-- <script src=./logo.js></script> -->
+
+ 
+
+
+<!-- page links -->
+
+<!-- <div style="
 display: flex;
+justify-content: center;
 ">
-<a href="sonic.html" target="iframeCanvas">SONIC</a>
-<a href="vision.html" target="iframeCanvas">VISION</a>
-<a href="visual.html" target="iframeCanvas">VISUAL</a>
-<a href="solutions.html" target="iframeCanvas">SOLUTIONS</a>
-</div>
+<a href="sonic.html">ЗВУК</a>
+<a href="vision.html">ИДЕЯ</a>
+<a href="visual.html">АРТ</a>
+<a href="solutions.html">ДЕЛА</a>
+
+</div> -->
 
 
 
-<div id="canvas">
-  <!-- Use iframe to embed other HTML pages -->
-  <iframe name="iframeCanvas"src="feya.html"></iframe>
-</div>
+        <!-- <canvas id="bg" width=500 height=500 
+        style="position: absolute; z-index: 0; 
+        /* left: 50%; top: 40%; transform: translate(-50%, -50%);
+        background-color: rgb(255, 255, 255); border-radius: 40px */
+        
+        "></canvas> 
+
+        <canvas id="synth" width=500 height=500 
+          style=" position: absolute; 
+          z-index: 1;
+          /* left: 50%; top: 40%; transform: translate(-50%, -50%);
+          border:1px solid #d3d3d3; border-radius: 40px  */
+          
+        "></canvas> -->
+
+   
+
+
+<!-- <script src=./hydra-synth.js></script> -->
+<!-- <script src=./art_2.js></script> -->
+
+
+
+<!-- <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
+
+<script type="importmap">
+{
+    "imports": {
+    "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+     }
+}
+</script>  -->
+
+
+
+<!-- <script src=./three.js></script>
+<script src=./GLTFLoader.js></script>
+<script src=./OrbitControls.js></script> -->
+<!-- <script type="module" src=./feya.js></script> -->
+
+<!-- <script src=./33.js></script> -->
 
 
 
 <!-- соцсети -->
 
-<div style=" 
-    display: flex;
+<!-- <div style=" 
+     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    min-height: 100vh;"
+    /* align-items: flex-end;
+    min-height: 100vh;  */
+    "
     >
       <a href="index.html"
       target="_self"
@@ -96,34 +239,29 @@ display: flex;
       <a href="index.html"
       target="_self"
       onclick="window.open(
-        'https://artstation.com/t3os','artstation','width=1280,height=720')">
+        'https://artstation.com/t3oc','artstation','width=1280,height=720')">
         <img src="artstation.svg" height="50" ></a>
 
       <a href="index.html"
       target="_self"
       onclick="window.open(
-        'https://youtube.com/@t3os','youtube','width=1280,height=720')">
+        'https://youtube.com/@t3oc','youtube','width=1280,height=720')">
         <img src="youtube.svg" height="50" ></a>
 
-</div>
+</div> -->
+
+
+
+
+
+<div class="content" id="content"></div>
+
+
+
+
 
 </body>
 </html>
 
 
 
-<!--
-
-• go back to div container design
-
-• arrow buttons to switch pages
-
-• slower rotation OrbitControls
-
-
-• mobile lower bar z-index +1
-
-• mobile threejs fix
-
-• lazy load pictures
--->

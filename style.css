@@ -8,38 +8,39 @@
 html {
   min-height: 100%
 }
-
+@font-face { 
+  
+  font-family: Buka; 
+  src: url('7.ttf') 
+  format("truetype"); 
+  } 
 
 body {
 
-  text-shadow: rgb(126, 255, 233) 0.0em 0.2em 0.1em;
+  /* text-shadow: rgb(126, 255, 233) 0.0em 0.0em 0.1em; */
   background: 
-  
-  
-
-  linear-gradient(rgb(117, 205, 201), rgb(209, 250, 255));
+  linear-gradient(rgb(0, 158, 172), rgb(139, 194, 201));
 
   /* overflow: hidden; */
   margin: 0;
-  /*
-  justify-content: center;
-  align-content: center;
-  display: flex */
-
-  font-family: Helvetica;
-
+     
  
-  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
 }
 
 a:hover {
+  text-decoration: none;
   color: rgb(255, 129, 97);
-  
 }
 
 a {
-
+text-decoration: none;
 margin: 5px;
+color:rgb(255, 209, 209);
+font-size: 20pt;
+/* text-shadow: rgb(0, 166, 255) 0.0em 0.055em 0.0em; */
+
 
 }
 
@@ -66,9 +67,7 @@ margin: 5px;
 a.current {
   color: rgb(255, 255, 255);
   text-decoration: none;
-
   text-shadow: rgb(0, 255, 208) 0.0em 0.0em 0.1em;
-
   cursor: default;
 }
 
@@ -79,27 +78,19 @@ a.current {
 } */
 
 
-.bandcamp {
+/* .bandcamp {
 position: relative;
 flex-basis: 50%;
 display: flex;
 align-items: center;
-
-}
-
+} */
 
 
+/* 
 #canvas {
-  position: absolute;
-  top: 22%;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
 
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}

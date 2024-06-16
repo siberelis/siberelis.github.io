@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Header with Dynamic Content</title>
+<style>
+  /* Style the header */
+  .fixed-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    background: #333;
+    padding: 10px 0;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  /* Style the navigation links */
+  .fixed-header a {
+    
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+
+    font-family: Buka;  
+  }
+  /* Style for content div */
+  .content {
+    margin-top: 60px; /* Add a top margin to allow space for the fixed header */
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="fixed-header">
+    <a href="#" onclick="loadContent('sonic.html'); return false;">ЗВУК</a>
+    <a href="#" onclick="loadContent('vision.html'); return false;">ИДЕЯ</a>
+    <a href="#" onclick="loadContent('visual.html'); return false;">АРТ</a>
+    <a href="#" onclick="loadContent('solutions.html'); return false;">ДЕЛА</a>
+</div>
+
+<div class="content" id="content">
+  <!-- Content will be loaded here -->
+</div>
+
+<script>
+// Function to load HTML files into the div
+function loadContent(htmlFile) {
+  fetch(htmlFile)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('content').innerHTML = data;
+    })
+    .catch(error => console.error(error));
+}
+
+// Load default page
+loadContent('index.html');
+</script>
+
+</body>
+</html>

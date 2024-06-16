@@ -6,7 +6,7 @@
   --backdrop-color: rgba(240, 240, 240, 0.66);
   --gap-length: 2px;
   --row-height: 200px;
-  --column-width: 220px;
+  --column-width: 200px;
 }
 
 .gg-container *[data-theme="dark"] {
@@ -34,7 +34,7 @@
 }
 
 .gg-box img:hover {
-  opacity: 0.98;
+  opacity: 0.8;
 }
 
 #gg-screen {
@@ -50,7 +50,8 @@
 
 #gg-screen .gg-image {
   height: 100%;
-  display: inline-flex;
+  width: 100%;
+  /* display: inline-flex; */
   justify-content: center;
   align-items: center;
 }
@@ -106,11 +107,11 @@
   .gg-box img:nth-child(2n):not(:last-of-type) {
     grid-row-end: span 2;
   }
-
+/* 
   [data-layout="horizontal"] img:nth-child(2n):not(:last-of-type) {
     grid-column-end: span 2;
     grid-row-end: span 1;
-  }
+  } */
 
   [data-layout="square"] img:nth-child(2n):not(:last-of-type) {
     grid-row-end: span 1;
