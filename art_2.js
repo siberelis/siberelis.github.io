@@ -29,7 +29,7 @@
     .repeatX(5, 0)
     .repeatY(5, 0)
     
-    .rotate( () => time%360 * 0.2)
+    .rotate( () => time%360 * -0.2)
 
     .modulateRotate(src(s0),10)
     
