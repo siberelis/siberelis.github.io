@@ -51,7 +51,7 @@
             transform-origin: 50% 50%;
             height: 100%;
             width: 100%;
-            /* transition: transform 0.5s ease-in-out; */
+           
         }
         .hour-disc {
             width: 100%;
@@ -84,12 +84,12 @@
                 const milliseconds = now.getMilliseconds();
                 // Calculate the degree for the hour disc (16-hour format)
                 const hourDegree = 
-                // ((hours % 16) / 16) * 360;
-                                    ((hours % 24) / 24) * 360 +
-                                   (minutes / 60) * (360 / 24) +
-                                   (seconds / 3600) * (360 / 24) +
-                                   (milliseconds / 3600000) * (360 / 24)
-                                   +67.5
+                ((hours % 16) / 16) * 360;
+                                //     ((hours % 24) / 24) * 360 +
+                                //    (minutes / 60) * (360 / 24) +
+                                //    (seconds / 3600) * (360 / 24) +
+                                //    (milliseconds / 3600000) * (360 / 24)
+                                //    +67.5
                                    //gonna make more slavic calculations...
 
                 hourDiscContainer.style.transform = `rotate(${hourDegree}deg)`;
