@@ -105,7 +105,7 @@
 
 @media (min-width: 478px) {
   .gg-box img:nth-child(2n):not(:last-of-type) {
-    grid-row-end: span 2;
+    grid-row-end: span 1;
   }
 /* 
   [data-layout="horizontal"] img:nth-child(2n):not(:last-of-type) {
@@ -118,7 +118,7 @@
     grid-column-end: span 1;
   }
 }
-
+/* 
 @media (max-width: 768px) {
   .gg-box {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -131,4 +131,4 @@
   .gg-box {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
-}
+} */
